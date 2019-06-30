@@ -10,13 +10,9 @@
 
 $light-color:#fff;
 $action-color: #65e496;
+
 $OpenSans: 'Open Sans';
 $RobotoSlab: 'Roboto Slab';
-
-h1.h2,h3,h4, p {
-    padding: 0;
-    margin: 0;
-}
 
 
 body {
@@ -37,6 +33,7 @@ font-family: $RobotoSlab;
 .page{
        max-width: 1170px;
        margin:0 auto;
+      
     }
 
 .header{
@@ -100,9 +97,14 @@ font-family: $RobotoSlab;
     background-image: url(../img/book.svg);
     background-repeat: no-repeat;
     flex-basis: 500px;
-
+    &__name{ 
+        font-family:$OpenSans, serif;
+        font-size:18px;
+        font-weight: 400;
+        letter-spacing: 0.85px;
+        margin-bottom: 30px;
+    }
     &__title{
-      
         font-family: $RobotoSlab, serif;
         font-size:36px;
         color: $light-color;
@@ -118,9 +120,11 @@ font-family: $RobotoSlab;
 }
 
 
+
+
 .block-text{
 
-    flex-basis: calc(93% - 500px);
+   flex-basis: calc(93% - 500px);
    &__title{
        font-family: $RobotoSlab, serif;
        font-size: 48px;
@@ -137,7 +141,7 @@ font-family: $RobotoSlab;
            letter-spacing: 0.95px;
        }
    }
-   &__name{
+   &__name{ 
        font-family:$OpenSans, serif;
        font-size:18px;
        font-weight: 400;
@@ -167,6 +171,7 @@ font-family: $RobotoSlab;
        padding: 14px 0;
        letter-spacing: 0.7px;
    }
+   
    small{
        font-family:$OpenSans, serif;
        font-size:12px;
@@ -174,3 +179,73 @@ font-family: $RobotoSlab;
        letter-spacing:0.5px;
    }
 }
+
+
+.block-autor{
+    display: flex;
+    justify-content:space-between;
+    padding-top: 162px;
+    &__buy{
+        margin-top:48px;
+        margin-bottom:19px;
+        display: block;
+        font-family: $RobotoSlab, serif;
+        font-size:18px;
+        font-weight: 400;
+        color: $light-color; 
+        background-color: $action-color;
+        max-width: 240px;
+        border-radius: 3px;
+        text-align: center;
+        padding: 14px 0;
+        letter-spacing: 0.7px;
+   }
+  
+}
+}
+
+
+
+.block-avatar{ 
+    position: relative;
+    &__svg{
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img{
+        margin-right: 45px;
+        margin-top: 45px;
+    }
+}
+.block-counter{
+    padding-top: 184px;
+    &__list{
+        display:flex;
+        justify-content: space-around;
+        list-style-type: none;
+        text-align: center;
+        letter-spacing: 2px;
+        span{
+            display: block;
+            font-family: $RobotoSlab, serif;
+            font-size: 80px;
+            font-weight: 100;
+            color:$action-color;
+            padding-bottom: 14px; 
+            letter-spacing: 2.9px;
+        }
+    }
+    &__item{
+     
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+
+  }

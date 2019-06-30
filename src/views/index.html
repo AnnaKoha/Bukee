@@ -16,7 +16,7 @@
         <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
         <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
         <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto+Slab:100, 400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../styles/main.css">
     </head>
     <body>
@@ -67,10 +67,10 @@
                </div>
             </section>   
         </div>  
-            <section class="page page_white">
+            <section class="page block-autor page_white">
                 <div class="block-text">
-                    <h2 class="block-text__h2-section"> <span>-Book Author</span> Emma Anderson</h2>
-                    <p class="block-text__saying">A room without books is like a body without a soul</p>
+                    <p class="block-text__name">-Book Author</p>
+                    <h2 class="block-text__title">Emma Anderson <span>A room without books is like a body without a soul</span> </h2>
                     <p class="block-text__content">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </p>
@@ -79,17 +79,23 @@
                     </p>
                     <a class="block-text__buy">Read full biography</a>
                 </div>
-                <div class="block-img">
-                    <img src="img/avatar.jpg" alt="avatar">
+                <div class="block-avatar">
+                    <svg class="block-avatar__svg" width="435" height="558">
+                        <linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="435" y2="558">
+                                <stop  offset="0" style="stop-color:#446986"/>
+                                <stop  offset="1" style="stop-color:#5DBDAC"/>
+                        </linearGradient>
+                        <rect x="0" y="0" width="435" height="558" fill="url(#gradient)"></rect>
+                    </svg>
+                    <img class="block-avatar__img" src="img/avatar.jpg" alt="avatar">
                 </div>
-
             </section>
-            <section class="page page_white">
-                <h2 class="visuall-hiddenv">Counter</h2>
-                <ul class="counter-list">
-                    <li><span>12</span>Total published books</li>
-                    <li><span>5</span>Happy readers</li>
-                    <li><span>15,000</span>Happy readers</li>
+            <section class="page page_white block-counter">
+                <h2 class="visually-hidden">Counter</h2>
+                <ul class="block-counter__list">
+                    <li class="block-counter__item"><span>12</span>Total published books</li>
+                    <li class="block-counter__item"><span>5</span>Happy readers</li>
+                    <li class="block-counter__item"><span>15,000</span>Happy readers</li>
                 </ul>
             </section>
             <section class="page page_blue">
