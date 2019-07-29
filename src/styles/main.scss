@@ -31,6 +31,7 @@ font-family: $RobotoSlab;
     font-family: $RobotoSlab;
     font-size:18px;
     font-weight: 400;
+    background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e9af));
     background: linear-gradient(to top left, #65e49c, #65e9af);
     text-align: center;
     color: $light-color;
@@ -50,23 +51,41 @@ font-family: $RobotoSlab;
     }
 
 .header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 1170px;
     margin: 0 auto;
     padding: 55px 15px 178px 15px;
     @media(max-width: 920px){
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
      &-list{
         list-style-type: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         @media(max-width: 750px){
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
-        justify-content: flex-end;
-        align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         font-family: $OpenSans;
         font-size: 16px;
@@ -77,6 +96,7 @@ font-family: $RobotoSlab;
             margin-left: 20px;
             padding-bottom: 5px;
             border-bottom: 3px solid transparent;
+            -webkit-transition: 0.3s;
             transition: 0.3s;
         }
         &__item :hover{
@@ -105,8 +125,12 @@ font-family: $RobotoSlab;
  
 .block-book
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   &-demo{
     width: 445px;
     height: 639px;
@@ -118,7 +142,8 @@ font-family: $RobotoSlab;
      }
     
     background-repeat: no-repeat;
-    flex-basis: 500px;
+    -ms-flex-preferred-size: 500px;
+        flex-basis: 500px;
     position: relative;
     &__author{
         font-family: $OpenSans;
@@ -170,10 +195,12 @@ font-family: $RobotoSlab;
 
 .block-text{
     @media(max-width:1200px){
-        flex-basis: calc(93% - 315px);
+        -ms-flex-preferred-size: calc(93% - 315px);
+            flex-basis: calc(93% - 315px);
         padding: 0 15px;
     }
-   flex-basis: calc(93% - 500px);
+   -ms-flex-preferred-size: calc(93% - 500px);
+       flex-basis: calc(93% - 500px);
   
    &__title{
        font-family: $RobotoSlab;
@@ -216,7 +243,8 @@ font-family: $RobotoSlab;
        max-width: 250px;
        border-radius: 3px;
        padding: 14px 0;
-       box-shadow: 0 3px #59bb88;
+       -webkit-box-shadow: 0 3px #59bb88;
+               box-shadow: 0 3px #59bb88;
    }
    
    small{
@@ -283,7 +311,8 @@ font-family: $RobotoSlab;
         text-align: center;
         padding: 14px 0;
         letter-spacing: 0.7px;
-        box-shadow:0px 2px #b2f1be;
+        -webkit-box-shadow:0px 2px #b2f1be;
+                box-shadow:0px 2px #b2f1be;
 
     }
     }
@@ -292,8 +321,12 @@ font-family: $RobotoSlab;
 .block-autor{
     display: block;
   &-content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content:space-between;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
     padding-top: 162px;
     padding-bottom: 150px;
 }
@@ -341,13 +374,19 @@ font-family: $RobotoSlab;
     padding-bottom: 162px;
     
     &__list{
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         list-style-type: none;
         text-align: center;
         letter-spacing: 2px;
         @media(max-width: 750px){
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             &>li{
                 margin-bottom: 20px;
             }
@@ -443,6 +482,8 @@ font-family: $RobotoSlab;
     padding-bottom: 252px;
 
         &-social{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             &__title{
                 font-family: $RobotoSlab;
@@ -469,11 +510,18 @@ font-family: $RobotoSlab;
             }
         }
         &-text{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             @media(max-width: 1020px){
                 margin: 82 auto 0;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
             }
             h3{
                 font-size:24px;
@@ -482,7 +530,8 @@ font-family: $RobotoSlab;
                 margin-bottom: 18px;
             }
             &__about{
-                flex-basis: calc(100% - 690px);
+                -ms-flex-preferred-size: calc(100% - 690px);
+                    flex-basis: calc(100% - 690px);
             }
             &__text{
                 font-family: $OpenSans;
@@ -492,16 +541,19 @@ font-family: $RobotoSlab;
                 letter-spacing: 0.8px;
                 margin-bottom: 33px;
                 @media(max-width:1020px){
-                    flex-basis: 100%;
+                    -ms-flex-preferred-size: 100%;
+                        flex-basis: 100%;
                
                 }
             }
             
            
             &-table{
-                flex-basis: 574px;
+                -ms-flex-preferred-size: 574px;
+                    flex-basis: 574px;
                 @media(max-width:1020px){
-                    flex-basis: 100%;
+                    -ms-flex-preferred-size: 100%;
+                        flex-basis: 100%;
                     margin-top: 20px;
                 }
 
@@ -510,10 +562,13 @@ font-family: $RobotoSlab;
                     margin-top:28px;
                     padding: 0px;
                     counter-reset: list;
-                    column-count:2;
-                    column-gap: 19px;
+                    -webkit-column-count:2;
+                            column-count:2;
+                    -webkit-column-gap: 19px;
+                            column-gap: 19px;
                     @media(max-width: 630){
-                        column-count:1;
+                        -webkit-column-count:1;
+                                column-count:1;
                     }
                     &>li{
                         position: relative;
@@ -547,7 +602,8 @@ font-family: $RobotoSlab;
                     padding: 15px 48px;
                     border: none;
                     margin-left: 6px;
-                    box-shadow: 0 3px #b2f1be;
+                    -webkit-box-shadow: 0 3px #b2f1be;
+                            box-shadow: 0 3px #b2f1be;
                 }
             }
         }
@@ -564,11 +620,17 @@ font-family: $RobotoSlab;
 
   .other-books{
      &-list{
+          display:-webkit-box;
+          display:-ms-flexbox;
           display:flex;
-          justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
           list-style-type:none; 
           @media(max-width: 1020px){
-              flex-direction: column;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: column;
+                      flex-direction: column;
              }
           &__item{
             text-align: center;
@@ -661,19 +723,30 @@ font-family: $RobotoSlab;
       padding-bottom: 148px;
       
       &__list{
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin-top: 85px;
         @media(max-width: 900px){
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             margin-bottom: 40px;
         }
       }
       &__item{
           list-style-type: none;
-          flex-basis: 32%;
+          -ms-flex-preferred-size: 32%;
+              flex-basis: 32%;
           @media(max-width: 900px){
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             margin: 45px auto 0;
             max-width: 500px;
         }
@@ -687,7 +760,8 @@ font-family: $RobotoSlab;
             letter-spacing: 0.8px;
             margin-bottom: 12px;
             color: $dark-color;
-            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
           }
         
           &_link{
@@ -712,8 +786,10 @@ font-family: $RobotoSlab;
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                        transform: translate(-50%, -50%);
-                object-fit: cover;
+                        -webkit-transform: translate(-50%, -50%);
+                                transform: translate(-50%, -50%);
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
           }
       }
@@ -723,20 +799,29 @@ font-family: $RobotoSlab;
             margin: 74px auto 0;
             padding: 13px 17px;
             max-width: 227px;
-            box-shadow: 0px 2px #65e496;
+            -webkit-box-shadow: 0px 2px #65e496;
+                    box-shadow: 0px 2px #65e496;
       
       }
   }
   .newsletter{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 164px 0;
     @media(max-width: 1020px){
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
     }
     &-item{
-        flex-basis: 49%;
+        -ms-flex-preferred-size: 49%;
+            flex-basis: 49%;
         &__title{
             font-size: 48px;
             letter-spacing: 1.9px;
@@ -760,7 +845,8 @@ font-family: $RobotoSlab;
         &__input{
             display: block;
             width: 100%;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
             background-color: $title-dark-color;
             padding: 15px 27px;
             border-radius: 3px;
@@ -786,9 +872,11 @@ font-family: $RobotoSlab;
             margin-top: 21px;
             padding: 11px 0 15px 0;
             letter-spacing: 0.7px;
+            background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e4af));
             background: linear-gradient(to top left, #65e49c, #65e4af);
             border: none;
-            box-shadow: 0 -2px #adedbb inset;
+            -webkit-box-shadow: 0 -2px #adedbb inset;
+                    box-shadow: 0 -2px #adedbb inset;
             &:focus{
                 outline: none;
             }
@@ -801,12 +889,19 @@ font-family: $RobotoSlab;
     }
 }
 .footer{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 170px 0;
     color: $gray-color;
     @media(max-width: 1020px){
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin: 30px auto 40px;
     }
     &__title{
@@ -817,14 +912,18 @@ font-family: $RobotoSlab;
         text-transform: uppercase;
         margin-bottom: 26px;
         @media(max-width: 2020px){
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             margin: 30px auto 40px;
         }
     }
        
    
     &-company{  
-        flex-basis: 30%;
+        -ms-flex-preferred-size: 30%;  
+            flex-basis: 30%;
         line-height: 1.4;
         &__logo{
             
@@ -835,7 +934,8 @@ font-family: $RobotoSlab;
         }
     }
     &-about{
-        flex-basis: 30%;
+        -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
         &__list{
             list-style-type: none;
             &>li{
@@ -844,7 +944,8 @@ font-family: $RobotoSlab;
         }
     }
     &-social{
-        flex-basis: 30%;
+        -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
         &__text{
             line-height: 1.4;
         }
@@ -857,6 +958,8 @@ font-family: $RobotoSlab;
             }
         }
         &__links{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             list-style-type: none;
             padding-left: 0;
@@ -929,8 +1032,12 @@ font-family: $RobotoSlab;
 }
 
 .slick-dots {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     list-style-type: none;
     padding: 0;
     &>li {
